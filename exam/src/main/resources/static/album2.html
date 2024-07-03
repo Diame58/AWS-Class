@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="/vendors/simplebar/simplebar.min.js"></script>
+    <script src="/assets/js/config.js"></script>
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link href="/vendors/simplebar/simplebar.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link href="/assets/css/theme-rtl.min.css" type="text/css" rel="stylesheet" id="style-rtl">
+    <link href="/assets/css/theme.min.css" type="text/css" rel="stylesheet" id="style-default">
+    <link href="/assets/css/user-rtl.min.css" type="text/css" rel="stylesheet" id="user-style-rtl">
+    <link href="/assets/css/user.min.css" type="text/css" rel="stylesheet" id="user-style-default">
+    <script>
+      var phoenixIsRTL = window.config.config.phoenixIsRTL;
+      if (phoenixIsRTL) {
+        var linkDefault = document.getElementById('style-default');
+        var userLinkDefault = document.getElementById('user-style-default');
+        linkDefault.setAttribute('disabled', true);
+        userLinkDefault.setAttribute('disabled', true);
+        document.querySelector('html').setAttribute('dir', 'rtl');
+      } else {
+        var linkRTL = document.getElementById('style-rtl');
+        var userLinkRTL = document.getElementById('user-style-rtl');
+        linkRTL.setAttribute('disabled', true);
+        userLinkRTL.setAttribute('disabled', true);
+      }
+    </script>
+	<link href="/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<section class="pb-7 pt-0 overflow-x-hidden">
+        <div class="bg-holder d-none d-xl-block" style="background-image:url(/assets/img/bg/bg-left-31.png);background-size:22%;background-position:left;z-index:1;">
+        </div>
+        <!--/.bg-holder-->
+
+        <div class="bg-holder d-none d-xl-block" style="background-image:url(/assets/img/bg/bg-right-31.png);background-size:15%;background-position:right bottom;z-index:1;">
+        </div>
+        <!--/.bg-holder-->
+        
+		<form class="m-6">
+        <div class="bg-latest-posts"></div>
+        <div class="container-medium text-center position-relative z-2">
+          <h3 class="mb-2 text-body-emphasis">나의 사진 앨범들</h3>
+          <p class="mb-0 text-body-tertiary mb-13">나의 여정 모음</p>
+        </div>
+        <div class="swiper-theme-container swiper-zooming-slider">
+          <div class="swiper-container theme-slider" data-swiper='{"loop":true,"slidesPerView":1.3,"spaceBetween":32,"speed":2000,"autoplay":true,"centeredSlides":true,"breakpoints":{"540":{"slidesPerView":1.5},"768":{"slidesPerView":1.8},"1200":{"slidesPerView":2},"1530":{"slidesPerView":2.8}}}'>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide rounded-3 overflow-hidden">
+                <div class="position-relative w-100 h-100"><img class="w-100 h-100 object-fit-cover" src="/images/1.jpg" alt="" />
+                  <div class="backdrop-faded p-4 p-md-6">
+                    <div class="d-flex align-items-center mb-2"><span class="text-secondary-lighter me-2" data-feather="calendar"></span>
+                      <h6 class="mb-0 fw-semibold text-secondary-lighter pe-3 me-3 border-end">Monday, Nov 07, 2022</h6><span class="fa-solid fa-star text-warning fs-9 me-2"></span>
+                      <h6 class="mb-0 text-secondary-lighter fw-semibold">4.8</h6>
+                    </div><a class="text-white fw-bold fs-7" href="#!">Beautiful Frence, Let's Travelling!</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide rounded-3 overflow-hidden">
+                <div class="position-relative w-100 h-100"><img class="w-100 h-100 object-fit-cover" src="/images/2.jpg"" alt="" />
+                  <div class="backdrop-faded p-4 p-md-6">
+                    <div class="d-flex align-items-center mb-2"><span class="text-secondary-lighter me-2" data-feather="calendar"></span>
+                      <h6 class="mb-0 fw-semibold text-secondary-lighter pe-3 me-3 border-end">Monday, Nov 06, 2022</h6><span class="fa-solid fa-star text-warning fs-9 me-2"></span>
+                      <h6 class="mb-0 text-secondary-lighter fw-semibold">4.5</h6>
+                    </div><a class="text-white fw-bold fs-7" href="#!">Man Standing on Watching Mountain</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide rounded-3 overflow-hidden">
+                <div class="position-relative w-100 h-100"><img class="w-100 h-100 object-fit-cover" src="/images/3.jpg"" alt="" />
+                  <div class="backdrop-faded p-4 p-md-6">
+                    <div class="d-flex align-items-center mb-2"><span class="text-secondary-lighter me-2" data-feather="calendar"></span>
+                      <h6 class="mb-0 fw-semibold text-secondary-lighter pe-3 me-3 border-end">Monday, Nov 05, 2022</h6><span class="fa-solid fa-star text-warning fs-9 me-2"></span>
+                      <h6 class="mb-0 text-secondary-lighter fw-semibold">4.2</h6>
+                    </div><a class="text-white fw-bold fs-7" href="#!">Beautiful Bali Indonesia, Let's Travelling!</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide rounded-3 overflow-hidden">
+                <div class="position-relative w-100 h-100"><img class="w-100 h-100 object-fit-cover" src="/images/4.jpg"" alt="" />
+                  <div class="backdrop-faded p-4 p-md-6">
+                    <div class="d-flex align-items-center mb-2"><span class="text-secondary-lighter me-2" data-feather="calendar"></span>
+                      <h6 class="mb-0 fw-semibold text-secondary-lighter pe-3 me-3 border-end">Monday, Nov 04, 2022</h6><span class="fa-solid fa-star text-warning fs-9 me-2"></span>
+                      <h6 class="mb-0 text-secondary-lighter fw-semibold">4.5</h6>
+                    </div><a class="text-white fw-bold fs-7" href="#!">Chasing sunsets, making memories worldwide.</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-nav">
+            <div class="swiper-button-next"><span class="fas fa-chevron-right text-primary" data-fa-transform="shrink-3"></span></div>
+            <div class="swiper-button-prev"><span class="fas fa-chevron-left text-primary" data-fa-transform="shrink-3"></span></div>
+          </div>
+        </div>
+        <div class="text-center mt-12 position-relative z-2">
+          <button class="btn btn-link p-0 fs-8">View all<span class="fa-solid fa-chevron-right ms-2" data-fa-transform="shrink-1"></span></button>
+        </div>
+        </form>
+      </section>
+      
+      
+	<!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="/vendors/popper/popper.min.js"></script>
+    <script src="/vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="/vendors/anchorjs/anchor.min.js"></script>
+    <script src="/vendors/is/is.min.js"></script>
+    <script src="/vendors/fontawesome/all.min.js"></script>
+    <script src="/vendors/lodash/lodash.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="/vendors/list.js/list.min.js"></script>
+    <script src="/vendors/feather-icons/feather.min.js"></script>
+    <script src="/vendors/dayjs/dayjs.min.js"></script>
+    <script src="/assets/js/phoenix.js"></script>
+    <script src="/vendors/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="/vendors/isotope-packery/packery-mode.pkgd.min.js"></script>
+    <script src="/vendors/bigpicture/BigPicture.js"></script>
+    <script src="/vendors/typed.js/typed.umd.js"></script>
+    <script src="/vendors/swiper/swiper-bundle.min.js"></script>
+
+
+</body>
+</html>

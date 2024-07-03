@@ -1,22 +1,46 @@
-<!doctype html>
-<html lang="ko">
+<!DOCTYPE html>
+<html>
 <head>
-<script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<meta charset="UTF-8">
+<title>신용카드 결제하기</title>
+
 </head>
 <body>
-<script type="text/javascript">
-  var naver_id_login = new naver_id_login("YOUR_CLIENT_ID", "YOUR_CALLBACK_URL");
-  // 접근 토큰 값 출력
-  alert(naver_id_login.oauthParams.access_token);
-  // 네이버 사용자 프로필 조회
-  naver_id_login.get_naver_userprofile("naverSignInCallback()");
-  // 네이버 사용자 프로필 조회 이후 프로필 정보를 처리할 callback function
-  function naverSignInCallback() {
-    alert(naver_id_login.getProfileData('email'));
-    alert(naver_id_login.getProfileData('nickname'));
-    alert(naver_id_login.getProfileData('age'));
-  }
+
+
+<script src="https://cdn.iamport.kr/v1/iamport.js"></script>
+
+
+<button onclick="requestPay()">카드결제</button>
+
+<script>
+IMP.init("imp40563678");
+
+function requestPay(){
+IMP.request_pay(
+		  {
+		    pg: "danal_tpay",
+		    pay_method: "card",
+		    merchant_uid: `15651548947442154asad`, // 주문 고유 번호
+		    name: "노르웨이 회전 의자",
+		    amount: 200,
+		    buyer_email: "gildong@gmail.com",
+		    buyer_name: "홍길동",
+		    buyer_tel: "010-4242-4242",
+		    buyer_addr: "서울특별시 강남구 신사동",
+		    buyer_postcode: "01181",
+		  },
+		  function (response) {
+		    // 결제 종료 시 호출되는 콜백 함수
+		    // response.imp_uid 값으로 결제 단건조회 API를 호출하여 결제 결과를 확인하고,
+		    // 결제 결과를 처리하는 로직을 작성합니다.
+		  },
+		);
+}
+
 </script>
+
+
+
 </body>
 </html>

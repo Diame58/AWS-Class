@@ -1,5 +1,6 @@
 package com.example.javaexam;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,13 +29,21 @@ public class MainController {
 	public String signup() {
 		return "signup";
 	}
+	
+	@Autowired
+	MainService mainService;
+	
 	@PostMapping("/signup")//클라이언트쪽에서 서버쪽으로 전달
 	public String signupdata(@RequestParam ("id") String id,
 							 @RequestParam ("pw") String pw
 			) {
 		
-		System.out.println(id);
-		System.out.println(pw);
+		System.out.println("컨트롤러로 넘어온 id = " + id);
+		System.out.println("컨트롤러로 넘어온 pw = " + pw);
+		
+		//MainService mainService = new MainService();
+		
+		mainService.servicecreate(id,pw);
 		return "index";
 	}
 

@@ -63,23 +63,5 @@ public class MainController {
 	}
 	
 	
-	@GetMapping("/board")
-	public String board() {
-		return "board";
-	}
-	
-	@PostMapping("/board")
-	public String board(@RequestParam ("title") String title,
-						@RequestParam ("content") String content
-			) {
-		System.out.println(title);
-		System.out.println(content);
-		
-		return "index";
-	}
-	
-	
-	
-	
-	
+
 }

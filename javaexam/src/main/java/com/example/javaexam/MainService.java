@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 //@RequiredArgsConstructor
 public class MainService {
 	
-	private final MainRepository mainRepository;
+	//private final MainRepository mainRepository;
 	
 	
 	//@Autowired
@@ -18,7 +18,7 @@ public class MainService {
 		System.out.println("서비스로 넘어온 id = " + id);
 		System.out.println("서비스로 넘어온 pw = " + pw);
 		
-		//MainRepository mainRepository =new MainRepository();
+		MainRepository mainRepository =new MainRepository();
 		
 		mainRepository.repositorycreate(id,pw);
 		

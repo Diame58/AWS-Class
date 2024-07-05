@@ -1,9 +1,7 @@
 package com.example.jpaexam;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -23,7 +21,7 @@ public class BoardController {
 	
 	
 	@PostMapping("/create")
-		public String create(@RequestParam ("btitle") String ti,
+		public String createdata(@RequestParam ("btitle") String ti,
 								 @RequestParam ("bcontent") String con) {
 			
 	
@@ -31,12 +29,6 @@ public class BoardController {
 		boardService.servicecreate(ti,con);
 			return "index";
 }
-	
-	@PostMapping("createobject")
-		public String createobject(@ModelAttribute Board board) {
-		boardService.createobject(board);
-	}
-		
 	
 
 	

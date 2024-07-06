@@ -1,8 +1,8 @@
+/*
 package com.example.javaexam;
 
 import org.springframework.stereotype.Service;
 
-/*
 @Service
 //@RequiredArgsConstructor
 public class MainService {
